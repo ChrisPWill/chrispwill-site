@@ -1,6 +1,7 @@
 {
   "tasks": {
-    "dev": "deno run --watch main.ts"
+    "dev": "deno x @11ty/eleventy --serve",
+    "build": "deno x @11ty/eleventy"
   },
   "imports": {
     "@11ty/eleventy": "npm:@11ty/eleventy@^3.1.2",
