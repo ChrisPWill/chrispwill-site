@@ -101,10 +101,20 @@ ul.post-list li {
 }
 
 time {
-  color: var(--text-dim);
+  color: var(--accent-purple);
   font-family: var(--font-mono);
   font-size: 0.85rem;
   white-space: nowrap;
+}
+
+time::before {
+  content: "[";
+  color: var(--accent-yellow);
+}
+
+time::after {
+  content: "]";
+  color: var(--accent-yellow);
 }
 
 /* Blockquotes */
