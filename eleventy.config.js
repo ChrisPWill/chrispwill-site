@@ -14,6 +14,13 @@ export default function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
   });
 
+  eleventyConfig.addFilter("readingTime", (content) => {
+    const text = content.replace(/<[^>]*>/g, ""); // Strip HTML
+    const words = text.split(/\s+/g).length;
+    const minutes = Math.ceil(words / 200);
+    return `${minutes} min read`;
+  });
+
   eleventyConfig.addCollection("posts", function (collectionApi) {
     const isDev = Deno.env.get("ELEVENTY_ENV") === "dev";
 
