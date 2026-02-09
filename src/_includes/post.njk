@@ -3,6 +3,9 @@ layout: layout.njk
 ---
 <article>
   <header>
+    {% if not published %}
+      <h4>🚧 Set `published: true` in frontmatter to publish 🚧</h4>
+    {% endif %}
     <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>
   </header>
   

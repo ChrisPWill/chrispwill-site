@@ -14,6 +14,19 @@ export default function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
   });
 
+  eleventyConfig.addCollection("posts", function (collectionApi) {
+    const isDev = Deno.env.get("ELEVENTY_ENV") === "dev";
+
+    return collectionApi.getFilteredByGlob("src/posts/*.md")
+      .filter((post) => {
+        if (post.data.published) {
+          return true;
+        }
+
+        return isDev;
+      });
+  });
+
   return {
     dir: {
       input: "src",
