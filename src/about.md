@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: About Me
+title: Me
 ---
 
 Hey there!
