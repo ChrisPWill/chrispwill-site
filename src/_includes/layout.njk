@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
+    <nav class="site-nav">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">~/chrispwill</a>
+        <div class="nav-links">
+          <a href="/" class="{{ 'active' if page.url == '/' or '/posts' in page.url }}">Blog</a>
+          <a href="/about/" class="{{ 'active' if page.url == '/about/' }}">About</a>
+          <a href="https://github.com/ChrisPWill" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </nav>
     <h1>{{ title }}</h1>
     <main>
       {{ content | safe }}
