@@ -1,0 +1,14 @@
+---
+layout: layout.njk
+---
+<article>
+  <header>
+    <time datetime="{{ page.date }}">{{ page.date | readableDate }}</time>
+  </header>
+  
+  <div class="content">
+    {{ content | safe }}
+  </div>
+
+  <p><em>Tags: {{ tags }}</em></p>
+</article>

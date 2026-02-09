@@ -6,6 +6,7 @@
   },
   "imports": {
     "@11ty/eleventy": "npm:@11ty/eleventy@^3.1.2",
-    "@std/assert": "jsr:@std/assert@1"
+    "@std/assert": "jsr:@std/assert@1",
+    "luxon": "npm:luxon@^3.7.2"
   }
 }

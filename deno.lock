@@ -3,7 +3,8 @@
   "specifiers": {
     "jsr:@std/assert@1": "1.0.18",
     "jsr:@std/internal@^1.0.12": "1.0.12",
-    "npm:@11ty/eleventy@^3.1.2": "3.1.2_chokidar@3.6.0_posthtml@0.16.7"
+    "npm:@11ty/eleventy@^3.1.2": "3.1.2_chokidar@3.6.0_posthtml@0.16.7",
+    "npm:luxon@^3.7.2": "3.7.2"
   },
   "jsr": {
     "@std/assert@1.0.18": {
@@ -734,7 +735,8 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@1",
-      "npm:@11ty/eleventy@^3.1.2"
+      "npm:@11ty/eleventy@^3.1.2",
+      "npm:luxon@^3.7.2"
     ]
   }
 }
