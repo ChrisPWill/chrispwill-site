@@ -160,7 +160,7 @@ blockquote {
 }
 
 .nav-links a.active::before {
-  content: "> ";
+  content: "/";
   color: var(--accent-green);
 }
 
