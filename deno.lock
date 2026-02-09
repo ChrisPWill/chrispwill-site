@@ -4,7 +4,9 @@
     "jsr:@std/assert@1": "1.0.18",
     "jsr:@std/internal@^1.0.12": "1.0.12",
     "npm:@11ty/eleventy@^3.1.2": "3.1.2_chokidar@3.6.0_posthtml@0.16.7",
-    "npm:luxon@^3.7.2": "3.7.2"
+    "npm:luxon@^3.7.2": "3.7.2",
+    "npm:markdown-it-for-inline@^2.0.1": "2.0.1",
+    "npm:markdown-it@^14.1.0": "14.1.0"
   },
   "jsr": {
     "@std/assert@1.0.18": {
@@ -500,6 +502,9 @@
     "luxon@3.7.2": {
       "integrity": "sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew=="
     },
+    "markdown-it-for-inline@2.0.1": {
+      "integrity": "sha512-JGOi3/Ohhzehs+1qSA4CkDydmVBtiYi2q2BD//YtTbSK+75InrGJX2MtPq1AdMeC4BV7rwEhq1+3pLnwGbsgzA=="
+    },
     "markdown-it@14.1.0": {
       "integrity": "sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==",
       "dependencies": [
@@ -736,7 +741,9 @@
     "dependencies": [
       "jsr:@std/assert@1",
       "npm:@11ty/eleventy@^3.1.2",
-      "npm:luxon@^3.7.2"
+      "npm:luxon@^3.7.2",
+      "npm:markdown-it-for-inline@^2.0.1",
+      "npm:markdown-it@^14.1.0"
     ]
   }
 }

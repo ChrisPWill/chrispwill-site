@@ -3,6 +3,11 @@ import { HtmlBasePlugin } from "npm:@11ty/eleventy";
 // deno-lint-ignore no-import-prefix no-unversioned-import
 import { DateTime } from "npm:luxon";
 
+// deno-lint-ignore no-import-prefix no-unversioned-import
+import markdownIt from "npm:markdown-it";
+// deno-lint-ignore no-import-prefix no-unversioned-import
+import markdownItForInline from "npm:markdown-it-for-inline";
+
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
 
@@ -33,6 +38,25 @@ export default function (eleventyConfig) {
         return isDev;
       });
   });
+
+  const md = markdownIt();
+  eleventyConfig.setLibrary(
+    "md",
+    md.use(
+      markdownItForInline,
+      "url_new_win",
+      "link_open",
+      function (tokens, idx) {
+        const href = tokens[idx].attrGet("href");
+
+        // Check if the link is external
+        if (href && href.startsWith("http")) {
+          tokens[idx].attrPush(["target", "_blank"]);
+          tokens[idx].attrPush(["rel", "noopener noreferrer"]);
+        }
+      },
+    ),
+  );
 
   return {
     dir: {

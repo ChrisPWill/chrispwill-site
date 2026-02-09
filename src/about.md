@@ -11,11 +11,11 @@ I'm also a proud daddy!
 
 ### Senior Software Engineer @ Atlassian (Apr 2020 -> Today)
 
-I currently work within the Ecosystem Deployments team at <a href="https://www.atlassian.com" target="_blank" rel="noopener">Atlassian</a>. We own the experience of deploying <a href="https://developer.atlassian.com/platform/forge/" target="_blank" rel="noopener">Forge</a> apps - the in-product app experience for third-party developers and internal integrations.
+I currently work within the Ecosystem Deployments team at [Atlassian](https://www.atlassian.com). We own the experience of deploying [Forge](https://developer.atlassian.com/platform/forge/) apps - the in-product app experience for third-party developers and internal integrations.
 
 ### Engineering Team Lead @ Escrow.com (2017 -> 2019)
 
-I led a team of engineers working on constant improvements to the site and its backend services. Notably, I led the development of the first iteration of the modern <a href="https://www.escrow.com/api" target="_blank" rel="noopener">Escrow Platform API</a>. I also led the migration of the Microsoft SQL Server database to support unicode, an involved process that involved scripts, safeguards, and detailed change management.
+I led a team of engineers working on constant improvements to the site and its backend services. Notably, I led the development of the first iteration of the modern [Escrow Platform API](https://www.escrow.com/api). I also led the migration of the Microsoft SQL Server database to support unicode, an involved process that involved scripts, safeguards, and detailed change management.
 
 ### Software Engineer @ Escrow.com (2016)
 
