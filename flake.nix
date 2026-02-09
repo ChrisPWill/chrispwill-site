@@ -1,27 +1,28 @@
 {
-  description = "11ty blog with Deno";
+  description = "11ty Blog (Pure Deno)";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    utils.url = "github:numtide/flake-utils";
+    flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs = {
     nixpkgs,
-    utils,
+    flake-utils,
     ...
   }:
-    utils.lib.eachDefaultSystem (system: let
+    flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {inherit system;};
     in {
       devShells.default = pkgs.mkShell {
         buildInputs = with pkgs; [
           deno
-          # Any other tools like tailwindcss-language-server
+          just # Command runner (easier than shell hooks)
         ];
 
         shellHook = ''
-          echo "11ty + Deno dev environment loaded"
+          echo "🦕 11ty + Deno environment loaded."
+          echo "Run 'just' to see available commands."
         '';
       };
     });

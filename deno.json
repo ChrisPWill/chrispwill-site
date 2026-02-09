@@ -1,7 +1,8 @@
 {
   "tasks": {
-    "dev": "deno x @11ty/eleventy --serve",
-    "build": "deno x @11ty/eleventy"
+    "clean": "rm -rf _site",
+    "build": "deno x @11ty/eleventy",
+    "serve": "deno x @11ty/eleventy --serve"
   },
   "imports": {
     "@11ty/eleventy": "npm:@11ty/eleventy@^3.1.2",
