@@ -1,0 +1,13 @@
+<ul class="post-list">
+{# Use 'postslist' if it exists, otherwise fallback to the full collection #}
+{% for post in (postslist or collections.posts) %}
+  <li>
+    {% if not post.data.published %}
+      {# Note: set `published: true` in the frontmatter to remove this #}
+      <span class="draft-badge">🚧</span>
+    {% endif %}
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    <time>{{ post.date | readableDate }}</time>
+  </li>
+{% endfor %}
+</ul>

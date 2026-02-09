@@ -1,0 +1,12 @@
+---
+layout: layout.njk
+title: ~/chrispwill
+---
+<p>Senior Software Engineer at Atlassian.</p>
+
+<h3>Recent Posts</h3>
+{# Only show the latest 3 posts on the home page #}
+{% set postslist = collections.posts.slice(0, 3) %}
+{% include "postlist.njk" %}
+
+<p><a href="/posts/">View all posts →</a></p>
