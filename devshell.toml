@@ -1,0 +1,24 @@
+[[commands]]
+name = "dev"
+help = "Run the dev server"
+command = "deno task serve"
+
+[[commands]]
+name = "build"
+help = "Build the site"
+command = "deno task build"
+
+[[commands]]
+name = "clean"
+help = "Clean build artifacts"
+command = "deno task clean"
+
+# [[env]]
+# name = "GO111MODULE"
+# value = "on"
+
+[devshell]
+packages = [
+  "deno",
+]
+
