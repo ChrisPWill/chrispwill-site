@@ -40,12 +40,12 @@ jobs:
           #   --delete \
           #   --cache-control "max-age=31536000,public"
 
-          # 2. HTML, JS, CSS - cache up to 5 minutes in shared cache
-          # Only 1 minute in browser cache
+          # 2. HTML, JS, CSS - cache up to 31 days in shared cache
+          # Only 5 minutes in browser cache
           aws s3 sync ./_site s3://${{ secrets.AWS_BUCKET_NAME }} \
             --delete \
             --exclude "img/*" \
-            --cache-control "s-maxage=300,max-age=60,public"
+            --cache-control "s-maxage=2678400,max-age=300,public"
       - name: Purge Cloudflare Cache
         run: |
           curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
