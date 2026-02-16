@@ -39,6 +39,9 @@ jobs:
           # aws s3 sync ./_site/img s3://${{ secrets.AWS_BUCKET_NAME }}/img \
           #   --delete \
           #   --cache-control "max-age=31536000,public"
+          aws s3 sync ./_site/fonts s3://${{ secrets.AWS_BUCKET_NAME }}/fonts \
+            --delete \
+            --cache-control "max-age=31536000,public"
 
           # 2. HTML, JS, CSS - cache up to 31 days in shared cache
           # Only 5 minutes in browser cache

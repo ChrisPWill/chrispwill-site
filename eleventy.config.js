@@ -11,8 +11,9 @@ import markdownItForInline from "npm:markdown-it-for-inline";
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
 
-  // 1. Copy CSS folder to _site/css
+  // 1. Copy CSS/font folder to _site/css
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/fonts");
 
   // 2. Add a readable date filter
   eleventyConfig.addFilter("readableDate", (dateObj) => {
