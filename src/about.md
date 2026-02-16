@@ -5,7 +5,7 @@ title: Me + Resume
 
 Hey there! I'm Chris Williams. I'm a senior software engineer working for Atlassian.
 
-I'm also a proud daddy of a baby girl!
+I'm also a proud daddy of a baby girl named Ellie!
 
 ## Work Experience
 
