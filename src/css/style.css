@@ -13,11 +13,27 @@
   --accent-purple: #c678dd;
   --accent-cyan: #56b6c2;
 
-  /* Layout */
-  --max-width: 720px;
-  --spacing: 1.5rem;
+  /* Responsive Layout Variables */
+  --max-width: 800px;
+  --spacing: 1.5rem; /* Default for desktop */
+  
+  /* Typography Scale */
+  --font-h1: 2.5rem;
+  --font-h2: 1.75rem;
+  --font-h3: 1.25rem;
+
   --font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: "Fira Code", Consolas, "Courier New", monospace;
+}
+
+/* Mobile Overrides */
+@media (max-width: 600px) {
+  :root {
+    --spacing: 1rem;       /* Tighter edges on mobile */
+    --font-h1: 2rem;       /* Smaller headings */
+    --font-h2: 1.5rem;
+    --font-h3: 1.15rem;
+  }
 }
 
 /* Reset & Base */
@@ -30,14 +46,10 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-}
 
-/* Layout Container */
-body > * {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 var(--spacing);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Typography */
@@ -48,9 +60,9 @@ h1, h2, h3 {
   margin-bottom: 1rem;
 }
 
-h1 { font-size: 2.5rem; border-bottom: 2px solid var(--bg-secondary); padding-bottom: 0.5rem; }
-h2 { font-size: 1.75rem; color: var(--accent-purple); }
-h3 { font-size: 1.25rem; color: var(--accent-cyan); }
+h1 { font-size: var(--font-h1); border-bottom: 2px solid var(--bg-secondary); padding-bottom: 0.5rem; }
+h2 { font-size: var(--font-h2); color: var(--accent-purple); }
+h3 { font-size: var(--font-h3); color: var(--accent-cyan); }
 
 a {
   color: var(--accent-blue);
@@ -73,9 +85,15 @@ code {
 pre {
   background: var(--bg-secondary);
   padding: 1rem;
-  overflow-x: auto;
   border-radius: 8px;
   border: 1px solid #3e4451;
+  
+  /* Mobile scrolling is critical */
+  overflow-x: auto;
+  
+  /* Break out of the container slightly on mobile for more space? Optional. */
+  margin-left: 0;
+  margin-right: 0;
 }
 
 pre code {
@@ -98,6 +116,21 @@ ul.post-list li {
   align-items: baseline;
   border-bottom: 1px solid var(--bg-secondary);
   padding-bottom: 0.5rem;
+  gap: 1rem; /* Ensure space between title and date */
+}
+
+@media (max-width: 480px) {
+  ul.post-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  /* Make the date smaller and dim when stacked */
+  time {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
 }
 
 time {
@@ -130,14 +163,40 @@ blockquote {
 .site-nav {
   background-color: var(--bg-secondary);
   border-bottom: 1px solid #3e4451;
-  padding: 0.5rem 0.5rem;
-  margin-bottom: 2rem; /* Space between nav and content */
+  padding: 0; /* Let container handle padding */
+}
+
+main, 
+.nav-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing);
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allows links to drop to next line on mobile */
+  padding: 0.5rem var(--spacing); /* Standard padding */
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto; /* Auto width on desktop */
+}
+
+.nav-toggle {
+  display: none; /* Hidden on Desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--text-main);
+  font-size: 1.5rem;
 }
 
 .nav-logo {
@@ -199,4 +258,49 @@ blockquote {
 /* Ensure the main container doesn't feel cramped */
 main {
   padding-top: 1rem;
+}
+
+/* --- Mobile / Hamburger Styles --- */
+@media (max-width: 600px) {
+  .nav-header {
+    width: 100%; /* Header takes full width so button sits on the right */
+  }
+
+  .nav-toggle {
+    display: block; /* Show button on mobile */
+  }
+
+  /* Hamburger Icon (simple text or CSS shape) */
+  .hamburger::after {
+    content: "☰"; /* Simple text icon */
+    color: var(--accent-blue);
+  }
+
+  /* The Links Menu */
+  .nav-links {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid #3e4451;
+    margin-top: 0.5rem;
+  }
+
+  /* The 'Open' State (toggled by JS) */
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--bg-primary); /* Subtle separator */
+  }
+  
+  /* Indent links slightly to look like a file tree */
+  .nav-links a::before {
+    content: "  ↳ ";
+    color: var(--text-dim);
+    font-size: 0.8em;
+  }
 }

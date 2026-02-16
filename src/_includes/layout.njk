@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>{{ title }}</title>
     <style>
@@ -11,14 +12,25 @@
   <body>
     <nav class="site-nav">
       <div class="nav-container">
-        <a href="/" class="nav-logo">~/chrispwill</a>
-        <div class="nav-links">
+        <div class="nav-header">
+          <a href="/" class="nav-logo">~/chris-williams</a>
+          <button class="nav-toggle" id="js-nav-toggle" aria-label="Toggle menu">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+        <div class="nav-links" id="js-nav-links">
           <a href="/about/" class="{{ 'active' if page.url == '/about/' }}">about_and_resume</a>
           <a href="/posts/" class="{{ 'active' if '/posts' in page.url }}">blog</a>
           <a href="https://github.com/ChrisPWill" target="_blank" rel="noopener">github</a>
         </div>
       </div>
     </nav>
+
+    <script>
+      document.getElementById('js-nav-toggle').addEventListener('click', function() {
+        document.getElementById('js-nav-links').classList.toggle('open');
+      });
+    </script>
     <h1>{{ title }}</h1>
     <main>
       {{ content | safe }}
