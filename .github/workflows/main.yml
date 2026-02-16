@@ -33,9 +33,18 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync ./_site s3://${{ secrets.AWS_BUCKET_NAME }} \
+          # 1. Assets (Images/Fonts) - Cache for 1 Year
+          # Can bust the cache with query string or by changing image name
+          aws s3 sync ./_site/img s3://${{ secrets.AWS_BUCKET_NAME }}/img \
             --delete \
             --cache-control "max-age=31536000,public"
+
+          # 2. HTML, JS, CSS - cache up to 5 minutes in shared cache
+          # Only 1 minute in browser cache
+          aws s3 sync ./_site s3://${{ secrets.AWS_BUCKET_NAME }} \
+            --delete \
+            --exclude "img/*" \
+            --cache-control "s-maxage=300,max-age=60,public"
       - name: Purge Cloudflare Cache
         run: |
           curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
