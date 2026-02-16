@@ -5,6 +5,10 @@ title: Me + Resume
 
 Hey there! I'm Chris Williams. I'm a senior software engineer working for 󰠄 Atlassian. I 󰋑 love  Neovim and  NixOS.
 
+Language-wise, I've got strong recent experience in  NodeJS and  Typescript on the backend, and I've also professionally used  Python,  C#,  Java and more.
+
+More generally I'm fluent in most of the main  AWS services such as  DynamoDB, 󰈔 S3,  EC2, and more. I've built and maintained scalable microservices, with experience across the backend and frontend.
+
 I'm also a proud daddy of a baby girl  named Ellie!
 
 ## Work Experience
