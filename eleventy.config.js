@@ -58,6 +58,8 @@ export default function (eleventyConfig) {
     ),
   );
 
+  eleventyConfig.addGlobalData("buildTime", Date.now());
+
   return {
     dir: {
       input: "src",
