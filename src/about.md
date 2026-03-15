@@ -15,7 +15,19 @@ I'm also a proud daddy of a baby girl  named Ellie!
 
 ### Senior Software Engineer @ Atlassian (Apr 2020 -> Today)
 
-I currently work within the Ecosystem Deployments team at [Atlassian](https://www.atlassian.com). We own the experience of deploying [Forge](https://developer.atlassian.com/platform/forge/) apps - the in-product app experience for third-party developers and internal integrations.
+I currently work within the Ecosystem Deployments team at [Atlassian](https://www.atlassian.com). We own the experience of deploying [Forge](https://developer.atlassian.com/platform/forge/) apps - the in-product app experience for third-party developers and internal integrations. As part of the role, I've:
+
+* Led a 5-engineer team through a 6-month migration to deploy customer applications in a tenant-isolated fashion, establishing the foundation for a cell-based architecture and unblocking adoption for Atlassian's largest enterprise customers.
+* Architected and demonstrated a migration path for deployment infrastructure to Temporal, ensuring durable, observable execution and defining the team's technical roadmap.
+* Championed developer productivity principle of small pull requests, including speaking on scoring pull request complexity and its effect on cycle time at Gradle DPE Summit 2024 in San Francisco.
+* Redesigned the DynamoDB schema for the Forge app discovery database, architecting a solution projected to reduce infrastructure costs by more than 50%.
+* Spearheaded a major technical debt reduction initiative by migrating the 20-year-old legacy "UPM" flow into the centralized AdminHub, unlocking significant enterprise features.
+* More generally, I have mentored numerous graduates and interns across multiple projects, with a particular focus on clean coding practices and an incremental approach to engineering.
+
+#### Skill profile
+
+Distributed systems, microservices, Scalability, Typescript, AWS (DynamoDB, EC2, S3, etc.), relational DBs incl. PostgreSQL, GraphQL, Terraform, React.JS
+
 
 ### Engineering Team Lead @ Escrow.com (2017 -> 2019)
 
