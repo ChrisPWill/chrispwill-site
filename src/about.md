@@ -18,20 +18,24 @@ I'm also a proud daddy of a baby girl  named Ellie!
 I currently work within the Ecosystem Deployments team at [Atlassian](https://www.atlassian.com). We own the experience of deploying [Forge](https://developer.atlassian.com/platform/forge/) apps - the in-product app experience for third-party developers and internal integrations. As part of the role, I've:
 
 * Led a 5-engineer team through a 6-month migration to deploy customer applications in a tenant-isolated fashion, establishing the foundation for a cell-based architecture and unblocking adoption for Atlassian's largest enterprise customers.
-* Architected and demonstrated a migration path for deployment infrastructure to Temporal, ensuring durable, observable execution and defining the team's technical roadmap.
-* Championed developer productivity principle of small pull requests, including speaking on scoring pull request complexity and its effect on cycle time at Gradle DPE Summit 2024 in San Francisco.
+* Architected and demonstrated a migration path for deployment infrastructure to Temporal, ensuring durable, observable execution and defining a core part of the team's technical roadmap for 2026.
+* Championed developer productivity principle of small pull requests, including speaking on scoring pull request complexity and its effect on cycle time at [Gradle DPE Summit 2024](https://dpe.org/sessions/caterina-curti-chris-williams/a-score-for-pull-request-complexity-its-impact-on-cycle-time-and-how-we-reduced-it-with-ai/) in San Francisco.
 * Redesigned the DynamoDB schema for the Forge app discovery database, architecting a solution projected to reduce infrastructure costs by more than 50%.
-* Spearheaded a major technical debt reduction initiative by migrating the 20-year-old legacy "UPM" flow into the centralized AdminHub, unlocking significant enterprise features.
+* Spearheaded a major technical debt reduction initiative by [migrating the 20-year-old legacy "UPM" flow into the centralized AdminHub](https://community.atlassian.com/forums/Community-Announcements-articles/Cloud-admins-we-re-making-app-management-easier/ba-p/2806285), unlocking significant enterprise features.
 * More generally, I have mentored numerous graduates and interns across multiple projects, with a particular focus on clean coding practices and an incremental approach to engineering.
 
 #### Skill profile
 
-Distributed systems, microservices, Scalability, Typescript, AWS (DynamoDB, EC2, S3, etc.), relational DBs incl. PostgreSQL, GraphQL, Terraform, React.JS
+Distributed Systems, Microservices, Scalability, Typescript, AWS (DynamoDB, EC2, S3, etc.), Relational DBs incl. PostgreSQL, GraphQL, Terraform, React.JS
 
 
 ### Engineering Team Lead @ Escrow.com (2017 -> 2019)
 
 I led a team of engineers working on constant improvements to the site and its backend services. Notably, I led the development of the first iteration of the modern [Escrow Platform API](https://www.escrow.com/api). I also led the migration of the Microsoft SQL Server database to support unicode, an involved process that involved scripts, safeguards, and detailed change management.
+
+#### Skill profile
+
+Microservices, MySQL, Microsoft SQL Server, Python, React.JS, REST APIs, Distributed Systems, .NET Framework, C#
 
 ### Software Engineer @ Escrow.com (2016)
 
